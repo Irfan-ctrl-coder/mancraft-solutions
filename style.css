@@ -1,0 +1,214 @@
+/* =========================================
+   GLOBAL STYLES & TYPOGRAPHY
+   ========================================= */
+/* Imported heavier font weights (800) for premium titles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --brand-blue: #004d7a; /* Deepened the blue slightly for better corporate contrast */
+    --brand-blue-light: #006699;
+    --brand-orange: #f28b2a; 
+    --text-dark: #1a202c; /* Almost black for razor-sharp readability */
+    --text-muted: #4a5568;   
+    --bg-light: #f7fafc; /* Softer, cooler off-white */
+}
+
+
+/* Custom Wide Layout - Put this near the top of style.css */
+.container-wide {
+    width: 100%;
+    max-width: 1536px; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased; /* Makes fonts look sharper on screens */
+}
+
+/* Reusable Typography Utilities */
+.tracking-wide { letter-spacing: 1.5px; }
+.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+}
+.section-padding {
+    padding: 100px 0; /* Massive breathing room for premium feel */
+}
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px); /* Gives the header a slight glass effect when scrolling */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--brand-blue) !important;
+}
+
+/* =========================================
+   HERO SECTION 
+   ========================================= */
+.hero-section {
+    padding: 120px 0 100px 0;
+    background: radial-gradient(circle at top left, #ffffff 0%, var(--bg-light) 100%);
+}
+
+.hero-title {
+    font-size: 3.8rem; 
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px; /* Tucks letters in tightly */
+    /* This creates the painted gradient text effect */
+    background: linear-gradient(135deg, #0b2545 0%, var(--brand-blue-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Buttons */
+.btn-brand-orange {
+    background-color: var(--brand-orange);
+    color: #ffffff !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-brand-orange:hover {
+    background-color: #d9781f; 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(242, 139, 42, 0.25) !important; 
+}
+
+.bg-primary-subtle { background-color: #e0f2fe !important; }
+.text-primary { color: var(--brand-blue-light) !important; }
+
+/* Image Styling */
+.custom-slider-img {
+    height: 550px; 
+    object-fit: cover; 
+}
+.shadow-premium {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); /* Large, highly diffused shadow */
+}
+
+/* =========================================
+   SPECIALIZATIONS CARDS
+   ========================================= */
+.feature-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.03); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); 
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+
+.feature-card:hover {
+    border-color: rgba(0, 102, 153, 0.1); 
+    box-shadow: 0 20px 40px rgba(0, 102, 153, 0.08); 
+    transform: translateY(-8px); 
+}
+
+/* Circular Icon Wrappers */
+.icon-box {
+    width: 65px;
+    height: 65px;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-blue);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-box {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.learn-more-link {
+    color: var(--brand-blue);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+    color: var(--brand-orange); 
+}
+
+/* =========================================
+   WHY US & FORM
+   ========================================= */
+.icon-box-small {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-blue);
+    font-size: 1.4rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.form-control-lg {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+}
+
+.form-control:focus {
+    background-color: #ffffff !important;
+    border: 1px solid var(--brand-blue) !important;
+    box-shadow: 0 0 0 4px rgba(0, 102, 153, 0.1);
+}
+
+/* Carousel (Slider) Images - Responsive Heights */
+.custom-slider-img {
+    height: 350px; /* Default: Shorter height for Mobile screens so it doesn't take over the phone */
+    object-fit: cover; 
+    object-position: center; 
+}
+
+/* THE MAGIC: Media Query for Desktop */
+@media (min-width: 992px) {
+    .custom-slider-img {
+        height: 600px; /* Overrides the 350px and makes it tall and majestic ONLY on large desktop screens */
+    }
+}
