@@ -67,54 +67,65 @@ body {
 /* =========================================
    HERO SECTION 
    ========================================= */
+/* =========================================
+   HERO SECTION (RESPONSIVE FIX)
+   ========================================= */
+/* 1. MOBILE-FIRST STYLES (These apply to phones) */
 .hero-section {
-    padding: 120px 0 100px 0;
+    padding: 60px 0 60px 0; /* Much less empty space on mobile */
     background: radial-gradient(circle at top left, #ffffff 0%, var(--bg-light) 100%);
 }
 
 .hero-title {
-    font-size: 3.8rem; 
+    font-size: 2.5rem; /* Shrunk down so it fits perfectly on a phone screen */
     font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -1.5px; /* Tucks letters in tightly */
-    /* This creates the painted gradient text effect */
+    line-height: 1.2;
+    letter-spacing: -1px; 
     background: linear-gradient(135deg, #0b2545 0%, var(--brand-blue-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 10px; /* FIX: Prevents mobile browsers from chopping off the bottom of letters like 'y' and 'g' */
 }
 
 .hero-subtitle {
     color: var(--text-muted);
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1.1rem; /* Slightly smaller for mobile */
+    line-height: 1.6;
 }
-
-/* Buttons */
-.btn-brand-orange {
-    background-color: var(--brand-orange);
-    color: #ffffff !important;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.btn-brand-orange:hover {
-    background-color: #d9781f; 
-    transform: translateY(-3px); 
-    box-shadow: 0 10px 20px rgba(242, 139, 42, 0.25) !important; 
-}
-
-.bg-primary-subtle { background-color: #e0f2fe !important; }
-.text-primary { color: var(--brand-blue-light) !important; }
 
 /* Image Styling */
 .custom-slider-img {
-    height: 550px; 
+    height: 350px; /* Shorter image so it doesn't hog the whole phone screen */
     object-fit: cover; 
 }
 .shadow-premium {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); /* Large, highly diffused shadow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); 
 }
 
+/* -----------------------------------------
+   2. DESKTOP STYLES (Media Query)
+   ----------------------------------------- */
+/* When the screen gets wider than a tablet (992px), these rules OVERRIDE the mobile ones above */
+@media (min-width: 992px) {
+    .hero-section {
+        padding: 120px 0 100px 0; /* Brings back the massive premium breathing room */
+    }
+    
+    .hero-title {
+        font-size: 3.8rem; /* Brings back the giant, punchy desktop text */
+        line-height: 1.15;
+        letter-spacing: -1.5px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+    
+    .custom-slider-img {
+        height: 600px; /* Makes the image tall and cinematic again */
+    }
+}
 /* =========================================
    SPECIALIZATIONS CARDS
    ========================================= */
