@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-white py-3">
-        
+    
+    <!-- =========================
+         NAVIGATION BAR
+         ========================= -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
         <div class="container-fluid container-wide">
             
             <a class="navbar-brand" href="index.html">
@@ -27,6 +30,7 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="expertise.html">Expertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold">Schedule a Consultation</a>
@@ -34,38 +38,48 @@
             
         </div>
     </nav>
- <section class="hero-section position-relative overflow-hidden">
+
+    <!-- =========================
+         HERO SECTION (FIXED SIZING & SPACING)
+         ========================= -->
+    <section class="hero-section position-relative overflow-hidden" style="background: linear-gradient(135deg, #021224 0%, var(--brand-blue) 100%);">
+        <div class="position-absolute top-50 start-50 translate-middle w-100 h-100" style="background: radial-gradient(circle, rgba(242,139,42,0.05) 0%, rgba(0,0,0,0) 60%);"></div>
         
-        <div class="container-wide">
-            <div class="row align-items-center g-5">
+        <div class="container-wide position-relative z-index-2">
+            <div class="row align-items-center g-4 g-lg-5">
                 
-                <div class="col-lg-5 mb-5 mb-lg-0 z-index-2">
-                    <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-4 fw-semibold tracking-wide">
-                        <i class="bi bi-stars me-1"></i> ENTERPRISE GRADE
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <span class="badge bg-white text-primary rounded-pill px-4 py-2 mb-4 fw-bold tracking-wide shadow-sm" style="font-size: 0.85rem;">
+                        <i class="bi bi-stars me-2"></i> ENTERPRISE GRADE
                     </span>
                     
-                    <h1 class="hero-title mb-4">
-                        Precision Technology for Smarter Infrastructure
+                    <h1 class="hero-title text-white fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px;">
+                        Precision Technology for <br>
+                        <span class="text-orange-gradient">Smarter Infrastructure</span>
                     </h1>
-                    <p class="hero-subtitle mb-5">
+                    
+                    <p class="mb-4 mb-lg-5" style="color: rgba(255, 255, 255, 0.8); font-size: 1.25rem; line-height: 1.8;">
                         Mancraft Solutions delivers integrated, high-performance physical and digital infrastructure designed to scale with modern enterprises.
                     </p>
+                    
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-brand-orange rounded-pill px-5 py-3 fw-bold shadow-sm">LEARN MORE</a>
+                        <a href="services.html" class="btn rounded-pill px-5 py-3 fw-bold shadow-sm" style="background-color: #FFD700; color: #021224; border: none; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);">
+                            EXPLORE CAPABILITIES
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-6 offset-lg-1">
-                    <div id="heroCarousel" class="carousel slide carousel-fade rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="col-lg-7">
+                    <div id="heroCarousel" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-premium border border-secondary border-opacity-25" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="4000">
-                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop" class="d-block w-100 custom-slider-img" alt="Corporate Team">
+                                <img src="Gemini_Generated_Image_b769cib769cib769.png" class="d-block w-100 custom-slider-img" alt="PA System Installation">
                             </div>
                             <div class="carousel-item" data-bs-interval="4000">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop" class="d-block w-100 custom-slider-img" alt="Technology Infrastructure">
+                                <img src="Gemini_Generated_Image_xh9kwmxh9kwmxh9k.png" class="d-block w-100 custom-slider-img" alt="Professional Audio Rack Wiring">
                             </div>
                             <div class="carousel-item" data-bs-interval="4000">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" class="d-block w-100 custom-slider-img" alt="Strategy Meeting">
+                                <img src="male-electrician-works-switchboard-overalls-against-backdrop-emergency-lighting.jpg" class="d-block w-100 custom-slider-img" alt="Background Audio Control Setup">
                             </div>
                         </div>
                     </div>
@@ -75,6 +89,9 @@
         </div>
     </section>
 
+    <!-- =========================
+         SPECIALIZATIONS SECTION
+         ========================= -->
     <section class="section-padding bg-white">
         <div class="container">
             
@@ -84,81 +101,58 @@
             </div>
 
             <div class="row g-4 g-lg-5">
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-camera-video"></i>
-                        </div>
+                        <div class="icon-box mb-4"><i class="bi bi-megaphone"></i></div>
+                        <h5 class="card-title mb-3">Public Address (PA) Systems</h5>
+                        <p class="card-text mb-4">Scalable public address infrastructure engineered for crystal-clear announcements and facility-wide mass communication.</p>
+                        <a href="services.html" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
+                        <div class="icon-box mb-4"><i class="bi bi-camera-video"></i></div>
                         <h5 class="card-title mb-3">Audio & Video Solutions</h5>
-                        <p class="card-text mb-4">
-                            Seamless integration and high-fidelity blueprints for enterprise-level audio and video communication.
-                        </p>
-                        <a href="#" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="card-text mb-4">Seamless integration and high-fidelity blueprints for enterprise-level audio and video communication.</p>
+                        <a href="services.html" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-shield-shaded"></i>
-                        </div>
+                        <div class="icon-box mb-4"><i class="bi bi-shield-shaded"></i></div>
                         <h5 class="card-title mb-3">Fire Safety & Security</h5>
-                        <p class="card-text mb-4">
-                            Advanced refinement protocols ensuring absolute safety and physical security for your assets.
-                        </p>
-                        <a href="#" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="card-text mb-4">Advanced refinement protocols ensuring absolute safety and physical security for your assets.</p>
+                        <a href="services.html" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-shield-lock"></i>
-                        </div>
-                        <h5 class="card-title mb-3">Cybersecurity</h5>
-                        <p class="card-text mb-4">
-                            Impenetrable digital forensics and network security to protect your most valuable data.
-                        </p>
-                        <a href="#" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
+                        <div class="icon-box mb-4"><i class="bi bi-broadcast"></i></div>
+                        <h5 class="card-title mb-3">Background Audio & Paging</h5>
+                        <p class="card-text mb-4">Multi-zone background music (BGM) and paging integration to enhance environmental ambiance and operational flow.</p>
+                        <a href="services.html" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-house-gear"></i>
-                        </div>
+                        <div class="icon-box mb-4"><i class="bi bi-house-gear"></i></div>
                         <h5 class="card-title mb-3">Building Automation</h5>
-                        <p class="card-text mb-4">
-                            Smart environmental controls and automated systems to enhance building efficiency.
-                        </p>
-                        <a href="#" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="card-text mb-4">Smart environmental controls and automated systems to enhance building efficiency and energy management.</p>
+                        <a href="services.html" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-hdd-network"></i>
-                        </div>
-                        <h5 class="card-title mb-3">IT Infrastructure</h5>
-                        <p class="card-text mb-4">
-                            Robust server networks and structured cabling designed for maximum uptime and speed.
-                        </p>
-                        <a href="#" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
-                        <div class="icon-box mb-4">
-                            <i class="bi bi-projector"></i>
-                        </div>
+                        <div class="icon-box mb-4"><i class="bi bi-projector"></i></div>
                         <h5 class="card-title mb-3">Custom Displays</h5>
-                        <p class="card-text mb-4">
-                            Bespoke home theatres and corporate display networks optimized for sound and visuals.
-                        </p>
-                        <a href="#" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
+                        <p class="card-text mb-4">Bespoke home theatres and corporate display networks optimized for pristine sound and visuals.</p>
+                        <a href="services.html" class="learn-more-link fw-bold text-decoration-none">Explore Service <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
 
@@ -166,8 +160,65 @@
         </div>
     </section>
 
+    <!-- =========================
+         FEATURED PRODUCTS SECTION
+         ========================= -->
     <section class="section-padding position-relative" style="background-color: var(--bg-light);">
-        <div class="container">
+        <div class="container-wide">
+            
+            <div class="text-center mb-5 pb-3">
+                <span class="text-uppercase text-primary fw-bold tracking-wide small">Premium Hardware</span>
+                <h2 class="section-title mt-2">Featured Equipment</h2>
+                <p class="text-muted mt-3 max-w-700 mx-auto">We partner with industry-leading manufacturers to supply the most resilient and acoustically accurate hardware available on the market.</p>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm feature-card overflow-hidden">
+                        <img src="pramplifier racks.jpg" class="card-img-top" alt="PA Amplifier Rack" style="height: 250px; object-fit: cover; background-color: #e2e8f0;">
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="badge bg-primary-subtle text-primary mb-3">PA Systems</span>
+                            <h5 class="fw-bold mb-3">Enterprise Paging Amplifiers</h5>
+                            <p class="text-muted small mb-4 lh-lg">Multi-zone high-power amplification units designed for continuous 24/7 commercial operation and emergency voice evacuation.</p>
+                            <a href="contact.html" class="fw-bold text-decoration-none d-flex align-items-center" style="color: var(--brand-blue);">Request Specifications <i class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm feature-card overflow-hidden">
+                        <img src="speakers.webp" class="card-img-top" alt="Ceiling Speakers" style="height: 250px; object-fit: cover; background-color: #e2e8f0;">
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="badge bg-primary-subtle text-primary mb-3">Background Audio</span>
+                            <h5 class="fw-bold mb-3">Architectural Ceiling Arrays</h5>
+                            <p class="text-muted small mb-4 lh-lg">Flush-mounted, low-profile acoustic speakers that deliver pristine background music while blending seamlessly into modern ceiling designs.</p>
+                            <a href="contact.html" class="fw-bold text-decoration-none d-flex align-items-center" style="color: var(--brand-blue);">Request Specifications <i class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm feature-card overflow-hidden">
+                        <img src="microphones.jpg" class="card-img-top" alt="Conference Microphone" style="height: 250px; object-fit: cover; background-color: #e2e8f0;">
+                        <div class="card-body p-4 p-xl-5">
+                            <span class="badge bg-primary-subtle text-primary mb-3">Audio Solutions</span>
+                            <h5 class="fw-bold mb-3">Digital Paging Consoles</h5>
+                            <p class="text-muted small mb-4 lh-lg">Programmable desktop microphone stations featuring one-touch zone selection, pre-recorded message triggers, and acoustic echo cancellation.</p>
+                            <a href="contact.html" class="fw-bold text-decoration-none d-flex align-items-center" style="color: var(--brand-blue);">Request Specifications <i class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         WHY CHOOSE US / FORM SECTION
+         ========================= -->
+    <section class="section-padding bg-white">
+        <div class="container-wide">
             <div class="row align-items-center g-5">
                 
                 <div class="col-lg-6 pe-lg-5">
@@ -179,9 +230,7 @@
                     <div class="row g-4 mb-5">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-start">
-                                <div class="icon-box-small me-3">
-                                    <i class="bi bi-pencil-square"></i>
-                                </div>
+                                <div class="icon-box-small me-3"><i class="bi bi-pencil-square"></i></div>
                                 <div>
                                     <h6 class="fw-bold mb-2">Tailored Design</h6>
                                     <p class="text-muted small mb-0 lh-lg">Custom-built solutions meticulously crafted for your unique requirements.</p>
@@ -190,9 +239,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex align-items-start">
-                                <div class="icon-box-small me-3">
-                                    <i class="bi bi-person-badge"></i>
-                                </div>
+                                <div class="icon-box-small me-3"><i class="bi bi-person-badge"></i></div>
                                 <div>
                                     <h6 class="fw-bold mb-2">Certified Experts</h6>
                                     <p class="text-muted small mb-0 lh-lg">Elite engineers trained to execute to the highest global standards.</p>
@@ -243,6 +290,9 @@
         </div>
     </section>
 
+    <!-- =========================
+         BRANDS GRID
+         ========================= -->
     <section class="py-5 bg-white border-top border-light">
         <div class="container-wide">
             
@@ -251,51 +301,27 @@
             </div>
             
             <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center pb-4">
-                
-                <div class="col text-center">
-                    <img src="a0e84c18c88ca500bfd811712598dd93.png
-                    " alt="LG" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="c81843cb312c2da86618489edeb41fdf.png" alt="Bosch" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="31f847c2429c0f8081433e64e600247b.png" alt="Honeywell" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="Netgear-Logo.wine.png" alt="Netgear" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="kraner.png" alt="Kramer" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="digisol.png" alt="Digisol" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="legrand.png" alt="Legrand" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="fortinet.webp" alt="Fortinet" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="poly.png" alt="Poly" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="hanwa.png" alt="Hanwha" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="benq.png" alt="BenQ" class="brand-logo-img">
-                </div>
-                <div class="col text-center">
-                    <img src="ruckus.png" alt="Ruckus" class="brand-logo-img">
-                </div>
-
+                <div class="col text-center"><img src="a0e84c18c88ca500bfd811712598dd93.png" alt="LG" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="c81843cb312c2da86618489edeb41fdf.png" alt="Bosch" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="31f847c2429c0f8081433e64e600247b.png" alt="Honeywell" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="Netgear-Logo.wine.png" alt="Netgear" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="kraner.png" alt="Kramer" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="digisol.png" alt="Digisol" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="legrand.png" alt="Legrand" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="fortinet.png" alt="Fortinet" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="poly.png" alt="Poly" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="hanwa.png" alt="Hanwha" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="benq.png" alt="BenQ" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="ruckus.png" alt="Ruckus" class="brand-logo-img"></div>
             </div>
         </div>
     </section>
 
+    <!-- =========================
+         FOOTER
+         ========================= -->
     <footer class="bg-dark text-white py-5 text-center">
-        <div class="container">
+        <div class="container-wide">
             <img src="Picsart_26-04-26_11-43-35-209.jpg.jpeg" alt="Logo" height="30" class="mb-4 opacity-50" style="filter: grayscale(100%) brightness(200%);">
             <p class="mb-0 small text-white-50 tracking-wide">&copy; 2026 Mancraft Solutions. All Rights Reserved.</p>
         </div>
@@ -311,10 +337,10 @@
             const email = document.getElementById('userEmail').value;
             const company = document.getElementById('userCompany').value;
 
-            const phoneNumber = "YOUR_PHONE_NUMBER_HERE"; 
+            const phoneNumber = "918088803188"; 
 
             const message = `Hello Mancraft Solutions!%0A%0ANew Consultation Request:%0A- Name: ${name}%0A- Email: ${email}%0A- Company: ${company}`;
-            const whatsappUrl = `https://wa.me/${8088803188}?text=${message}`;
+            const whatsappUrl = `https://wa.me/${"918088803188"}?text=${message}`;
 
             window.open(whatsappUrl, '_blank');
         });

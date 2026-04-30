@@ -1,34 +1,41 @@
 /* =========================================
    GLOBAL STYLES & TYPOGRAPHY
    ========================================= */
-/* Imported heavier font weights (800) for premium titles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --brand-blue: #004d7a; /* Deepened the blue slightly for better corporate contrast */
+    --brand-blue: #004d7a;
     --brand-blue-light: #006699;
     --brand-orange: #f28b2a; 
-    --text-dark: #1a202c; /* Almost black for razor-sharp readability */
+    --text-dark: #1a202c; 
     --text-muted: #4a5568;   
-    --bg-light: #f7fafc; /* Softer, cooler off-white */
+    --bg-light: #f7fafc; 
 }
 
-
-/* Custom Wide Layout - Put this near the top of style.css */
+/* Custom Wide Layout (FIXED PADDING) */
 .container-wide {
     width: 100%;
     max-width: 1536px; 
     margin-right: auto;
     margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    /* Standard 15px padding for mobile so images aren't squished */
+    padding-right: 15px; 
+    padding-left: 15px;
+}
+
+/* Brings back wider padding only on desktop */
+@media (min-width: 992px) {
+    .container-wide {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
-    -webkit-font-smoothing: antialiased; /* Makes fonts look sharper on screens */
+    -webkit-font-smoothing: antialiased; 
 }
 
 /* Reusable Typography Utilities */
@@ -40,7 +47,7 @@ body {
     letter-spacing: -0.5px;
 }
 .section-padding {
-    padding: 100px 0; /* Massive breathing room for premium feel */
+    padding: 100px 0; 
 }
 
 /* =========================================
@@ -48,7 +55,7 @@ body {
    ========================================= */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px); /* Gives the header a slight glass effect when scrolling */
+    backdrop-filter: blur(10px); 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
 }
 
@@ -64,68 +71,70 @@ body {
     color: var(--brand-blue) !important;
 }
 
+.btn-brand-orange {
+    background-color: var(--brand-orange);
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-brand-orange:hover {
+    background-color: #d97722;
+    color: white;
+}
+
 /* =========================================
-   HERO SECTION 
+   HERO SECTION (FIXED HEIGHTS)
    ========================================= */
-/* =========================================
-   HERO SECTION (RESPONSIVE FIX)
-   ========================================= */
-/* 1. MOBILE-FIRST STYLES (These apply to phones) */
+/* 1. MOBILE-FIRST STYLES */
 .hero-section {
-    padding: 60px 0 60px 0; /* Much less empty space on mobile */
-    background: radial-gradient(circle at top left, #ffffff 0%, var(--bg-light) 100%);
+    padding: 40px 0 !important; 
 }
 
 .hero-title {
-    font-size: 2.5rem; /* Shrunk down so it fits perfectly on a phone screen */
+    font-size: 2.5rem; 
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.15;
     letter-spacing: -1px; 
-    background: linear-gradient(135deg, #0b2545 0%, var(--brand-blue-light) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 10px; /* FIX: Prevents mobile browsers from chopping off the bottom of letters like 'y' and 'g' */
+    padding-bottom: 10px; 
 }
 
-.hero-subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem; /* Slightly smaller for mobile */
-    line-height: 1.6;
-}
-
-/* Image Styling */
+/* Reduced height for mobile so it looks like a wide banner */
 .custom-slider-img {
-    height: 350px; /* Shorter image so it doesn't hog the whole phone screen */
+    height: 280px !important; 
+    width: 100%;
     object-fit: cover; 
+    object-position: center;
 }
+
 .shadow-premium {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); 
 }
 
-/* -----------------------------------------
-   2. DESKTOP STYLES (Media Query)
-   ----------------------------------------- */
-/* When the screen gets wider than a tablet (992px), these rules OVERRIDE the mobile ones above */
+/* 2. DESKTOP STYLES */
 @media (min-width: 992px) {
     .hero-section {
-        padding: 120px 0 100px 0; /* Brings back the massive premium breathing room */
+        padding: 60px 0 !important; 
     }
     
     .hero-title {
-        font-size: 3.8rem; /* Brings back the giant, punchy desktop text */
-        line-height: 1.15;
+        font-size: 3.8rem; 
         letter-spacing: -1.5px;
     }
     
-    .hero-subtitle {
-        font-size: 1.25rem;
-        line-height: 1.8;
-    }
-    
+    /* Reduced from 700px to 550px. This permanently kills the dead blue space! */
     .custom-slider-img {
-        height: 600px; /* Makes the image tall and cinematic again */
+        height: 550px !important; 
     }
 }
+
+/* Minor text wrap fix for tablets */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.8rem !important; 
+    }
+}
+
 /* =========================================
    SPECIALIZATIONS CARDS
    ========================================= */
@@ -142,7 +151,6 @@ body {
     transform: translateY(-8px); 
 }
 
-/* Circular Icon Wrappers */
 .icon-box {
     width: 65px;
     height: 65px;
@@ -210,33 +218,14 @@ body {
     box-shadow: 0 0 0 4px rgba(0, 102, 153, 0.1);
 }
 
-/* Carousel (Slider) Images - Responsive Heights */
-.custom-slider-img {
-    height: 350px; /* Default: Shorter height for Mobile screens so it doesn't take over the phone */
-    object-fit: cover; 
-    object-position: center; 
-}
-
-/* THE MAGIC: Media Query for Desktop */
-@media (min-width: 992px) {
-    .custom-slider-img {
-        height: 600px; /* Overrides the 350px and makes it tall and majestic ONLY on large desktop screens */
-    }
-}
-
-
 /* =========================================
    BRANDS SECTION (LOGO GRID)
    ========================================= */
 .brand-logo-img {
-    height: 45px;          /* Locks the height so the row is perfectly straight */
-    width: 150px;          /* Gives wide logos room to stretch */
-    object-fit: contain;   /* Prevents the image from squishing or distorting */
-    
-    /* Erases solid white backgrounds from downloaded JPGs */
+    height: 45px;          
+    width: 150px;          
+    object-fit: contain;   
     mix-blend-mode: multiply; 
-    
-    /* Premium Hover Effect (Starts muted/grey, turns full color on hover) */
     filter: grayscale(100%) opacity(50%); 
     transition: all 0.3s ease;
     cursor: pointer;
@@ -244,53 +233,45 @@ body {
 
 .brand-logo-img:hover {
     filter: grayscale(0%) opacity(100%);
-    transform: translateY(-3px); /* Subtle lift effect */
+    transform: translateY(-3px); 
 }
-
 
 /* =========================================
    INNER PAGE STYLES (Services Header)
    ========================================= */
 .inner-page-header {
-    /* Made the dark blue even richer to make the white text pop */
     background: linear-gradient(135deg, #021224 0%, var(--brand-blue) 100%);
-    padding: 140px 0 100px 0; /* Massive breathing room */
+    padding: 140px 0 100px 0; 
 }
 
-/* Premium Desktop Typography */
 .inner-hero-title {
     color: #ffffff;
-    font-size: 4rem; /* Massive, bold sizing */
-    font-weight: 800; /* Uses that heavy Inter font we imported */
+    font-size: 4rem; 
+    font-weight: 800; 
     line-height: 1.1;
-    letter-spacing: -1.5px; /* Tucks the letters tightly together */
+    letter-spacing: -1.5px; 
 }
 
-/* The Highlight Gradient Effect */
 .text-orange-gradient {
     background: linear-gradient(135deg, var(--brand-orange) 0%, #ffb347 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 5px; /* Prevents text clipping */
+    padding-bottom: 5px; 
 }
 
-/* Subtitle Readability */
 .inner-hero-subtitle {
-    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white reduces eye strain */
+    color: rgba(255, 255, 255, 0.8); 
     font-size: 1.25rem;
     line-height: 1.8;
     max-width: 700px;
     font-weight: 400;
 }
 
-/* Mobile Responsiveness (Crucial so it doesn't break on phones) */
 @media (max-width: 991px) {
     .inner-page-header { padding: 80px 0 60px 0; }
     .inner-hero-title { font-size: 2.5rem; letter-spacing: -1px; }
     .inner-hero-subtitle { font-size: 1.1rem; }
 }
-
-
 
 /* Contact Page Card Hover */
 .contact-card {
@@ -300,7 +281,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
 }
-
 
 /* =========================================
    SOLUTIONS PAGE - INTERACTIVE TABS
@@ -320,7 +300,6 @@ body {
     border-color: var(--brand-blue) !important;
 }
 
-/* When a user clicks the tab, it turns solid blue */
 .nav-pills .nav-link.active.custom-tab {
     background-color: var(--brand-blue) !important;
     color: #ffffff !important;
@@ -328,13 +307,9 @@ body {
     box-shadow: 0 8px 20px rgba(0, 102, 153, 0.2);
 }
 
-/* Smooth fade animation for the content */
 .tab-content .tab-pane {
     transition: opacity 0.4s ease-in-out;
 }
-
-
-
 
 /* =========================================
    EXPERTISE PAGE STYLES
