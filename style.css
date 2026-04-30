@@ -12,18 +12,16 @@
     --bg-light: #f7fafc; 
 }
 
-/* Custom Wide Layout (FIXED PADDING) */
+/* Custom Wide Layout */
 .container-wide {
     width: 100%;
     max-width: 1536px; 
     margin-right: auto;
     margin-left: auto;
-    /* Standard 15px padding for mobile so images aren't squished */
     padding-right: 15px; 
     padding-left: 15px;
 }
 
-/* Brings back wider padding only on desktop */
 @media (min-width: 992px) {
     .container-wide {
         padding-right: 2rem;
@@ -84,56 +82,61 @@ body {
 }
 
 /* =========================================
-   HERO SECTION (FIXED HEIGHTS)
+   HERO SECTION (FULL BLEED FIX)
    ========================================= */
-/* 1. MOBILE-FIRST STYLES */
 .hero-section {
-    padding: 40px 0 !important; 
+    padding: 0 !important; /* Forces zero outer gap */
+}
+
+/* Controls the text padding so it still aligns perfectly with the rest of your site */
+.hero-text-pad {
+    padding: 60px 15px; /* Mobile padding */
 }
 
 .hero-title {
-    font-size: 2.5rem; 
+    font-size: 2.8rem; 
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -1px; 
     padding-bottom: 10px; 
 }
 
-/* Reduced height for mobile so it looks like a wide banner */
+/* Makes the image completely fill its side of the screen */
 .custom-slider-img {
-    height: 280px !important; 
+    height: 100% !important; 
+    min-height: 450px; /* Stops image from getting too thin on mobile */
     width: 100%;
     object-fit: cover; 
     object-position: center;
 }
 
-.shadow-premium {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); 
-}
-
-/* 2. DESKTOP STYLES */
+/* Desktop Styles */
 @media (min-width: 992px) {
-    .hero-section {
-        padding: 60px 0 !important; 
+    .hero-text-pad {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        /* This perfectly aligns the left text with your container-wide elements below! */
+        padding-left: max(2rem, calc((100vw - 1536px) / 2 + 2rem)); 
+        padding-right: 4rem;
     }
-    
+
     .hero-title {
         font-size: 3.8rem; 
         letter-spacing: -1.5px;
     }
     
-    /* Reduced from 700px to 550px. This permanently kills the dead blue space! */
     .custom-slider-img {
-        height: 550px !important; 
+        min-height: 650px; /* Cinematic height for desktop */
     }
 }
 
-/* Minor text wrap fix for tablets */
+/* Mobile text wrap fix */
 @media (max-width: 991px) {
     .hero-title {
         font-size: 2.8rem !important; 
     }
 }
+
 
 /* =========================================
    SPECIALIZATIONS CARDS

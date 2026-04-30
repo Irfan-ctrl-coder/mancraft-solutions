@@ -7,6 +7,10 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,45 +44,49 @@
     </nav>
 
     <!-- =========================
-         HERO SECTION (FIXED SIZING & SPACING)
+         HERO SECTION
          ========================= -->
-    <section class="hero-section position-relative overflow-hidden" style="background: linear-gradient(135deg, #021224 0%, var(--brand-blue) 100%);">
+    <section class="hero-section position-relative overflow-hidden p-0" style="background: linear-gradient(135deg, #021224 0%, var(--brand-blue) 100%);">
         <div class="position-absolute top-50 start-50 translate-middle w-100 h-100" style="background: radial-gradient(circle, rgba(242,139,42,0.05) 0%, rgba(0,0,0,0) 60%);"></div>
         
-        <div class="container-wide position-relative z-index-2">
-            <div class="row align-items-center g-4 g-lg-5">
+        <div class="container-fluid p-0 position-relative z-index-2">
+            <div class="row g-0 align-items-stretch">
                 
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <span class="badge bg-white text-primary rounded-pill px-4 py-2 mb-4 fw-bold tracking-wide shadow-sm" style="font-size: 0.85rem;">
-                        <i class="bi bi-stars me-2"></i> ENTERPRISE GRADE
-                    </span>
-                    
-                    <h1 class="hero-title text-white fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px;">
-                        Precision Technology for <br>
-                        <span class="text-orange-gradient">Smarter Infrastructure</span>
-                    </h1>
-                    
-                    <p class="mb-4 mb-lg-5" style="color: rgba(255, 255, 255, 0.8); font-size: 1.25rem; line-height: 1.8;">
-                        Mancraft Solutions delivers integrated, high-performance physical and digital infrastructure designed to scale with modern enterprises.
-                    </p>
-                    
-                    <div class="d-flex gap-3">
-                        <a href="services.html" class="btn rounded-pill px-5 py-3 fw-bold shadow-sm" style="background-color: #FFD700; color: #021224; border: none; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);">
-                            EXPLORE CAPABILITIES
-                        </a>
+                <!-- Animated: Slides in from the left -->
+                <div class="col-lg-5 d-flex align-items-center hero-text-pad" data-aos="fade-right">
+                    <div class="w-100">
+                        <span class="badge bg-white text-primary rounded-pill px-4 py-2 mb-4 fw-bold tracking-wide shadow-sm" style="font-size: 0.85rem;">
+                            <i class="bi bi-stars me-2"></i> ENTERPRISE GRADE
+                        </span>
+                        
+                        <h1 class="hero-title text-white fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px;">
+                            Precision Technology for <br>
+                            <span class="text-orange-gradient">Smarter Infrastructure</span>
+                        </h1>
+                        
+                        <p class="mb-4 mb-lg-5" style="color: rgba(255, 255, 255, 0.8); font-size: 1.25rem; line-height: 1.8;">
+                            Mancraft Solutions delivers integrated, high-performance physical and digital infrastructure designed to scale with modern enterprises.
+                        </p>
+                        
+                        <div class="d-flex gap-3">
+                            <a href="services.html" class="btn rounded-pill px-5 py-3 fw-bold shadow-sm" style="background-color: #FFD700; color: #021224; border: none; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);">
+                                EXPLORE CAPABILITIES
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-7">
-                    <div id="heroCarousel" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-premium border border-secondary border-opacity-25" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="4000">
+                <!-- Animated: Slides in from the right -->
+                <div class="col-lg-7 position-relative" data-aos="fade-left" data-aos-delay="200">
+                    <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100" data-bs-interval="4000">
                                 <img src="Gemini_Generated_Image_b769cib769cib769.png" class="d-block w-100 custom-slider-img" alt="PA System Installation">
                             </div>
-                            <div class="carousel-item" data-bs-interval="4000">
+                            <div class="carousel-item h-100" data-bs-interval="4000">
                                 <img src="Gemini_Generated_Image_xh9kwmxh9kwmxh9k.png" class="d-block w-100 custom-slider-img" alt="Professional Audio Rack Wiring">
                             </div>
-                            <div class="carousel-item" data-bs-interval="4000">
+                            <div class="carousel-item h-100" data-bs-interval="4000">
                                 <img src="male-electrician-works-switchboard-overalls-against-backdrop-emergency-lighting.jpg" class="d-block w-100 custom-slider-img" alt="Background Audio Control Setup">
                             </div>
                         </div>
@@ -95,14 +103,14 @@
     <section class="section-padding bg-white">
         <div class="container">
             
-            <div class="text-center mb-5 pb-3">
+            <div class="text-center mb-5 pb-3" data-aos="fade-up">
                 <span class="text-uppercase text-primary fw-bold tracking-wide small">Our Expertise</span>
                 <h2 class="section-title mt-2">Specializations</h2>
             </div>
 
             <div class="row g-4 g-lg-5">
                 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
                         <div class="icon-box mb-4"><i class="bi bi-megaphone"></i></div>
                         <h5 class="card-title mb-3">Public Address (PA) Systems</h5>
@@ -111,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
                         <div class="icon-box mb-4"><i class="bi bi-camera-video"></i></div>
                         <h5 class="card-title mb-3">Audio & Video Solutions</h5>
@@ -120,7 +128,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
                         <div class="icon-box mb-4"><i class="bi bi-shield-shaded"></i></div>
                         <h5 class="card-title mb-3">Fire Safety & Security</h5>
@@ -129,7 +137,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
                         <div class="icon-box mb-4"><i class="bi bi-broadcast"></i></div>
                         <h5 class="card-title mb-3">Background Audio & Paging</h5>
@@ -138,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
                         <div class="icon-box mb-4"><i class="bi bi-house-gear"></i></div>
                         <h5 class="card-title mb-3">Building Automation</h5>
@@ -147,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-card p-4 p-xl-5 rounded-4 h-100">
                         <div class="icon-box mb-4"><i class="bi bi-projector"></i></div>
                         <h5 class="card-title mb-3">Custom Displays</h5>
@@ -166,7 +174,7 @@
     <section class="section-padding position-relative" style="background-color: var(--bg-light);">
         <div class="container-wide">
             
-            <div class="text-center mb-5 pb-3">
+            <div class="text-center mb-5 pb-3" data-aos="fade-up">
                 <span class="text-uppercase text-primary fw-bold tracking-wide small">Premium Hardware</span>
                 <h2 class="section-title mt-2">Featured Equipment</h2>
                 <p class="text-muted mt-3 max-w-700 mx-auto">We partner with industry-leading manufacturers to supply the most resilient and acoustically accurate hardware available on the market.</p>
@@ -174,7 +182,7 @@
 
             <div class="row g-4">
                 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100 border-0 rounded-4 shadow-sm feature-card overflow-hidden">
                         <img src="pramplifier racks.jpg" class="card-img-top" alt="PA Amplifier Rack" style="height: 250px; object-fit: cover; background-color: #e2e8f0;">
                         <div class="card-body p-4 p-xl-5">
@@ -186,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 border-0 rounded-4 shadow-sm feature-card overflow-hidden">
                         <img src="speakers.webp" class="card-img-top" alt="Ceiling Speakers" style="height: 250px; object-fit: cover; background-color: #e2e8f0;">
                         <div class="card-body p-4 p-xl-5">
@@ -198,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="card h-100 border-0 rounded-4 shadow-sm feature-card overflow-hidden">
                         <img src="microphones.jpg" class="card-img-top" alt="Conference Microphone" style="height: 250px; object-fit: cover; background-color: #e2e8f0;">
                         <div class="card-body p-4 p-xl-5">
@@ -221,7 +229,7 @@
         <div class="container-wide">
             <div class="row align-items-center g-5">
                 
-                <div class="col-lg-6 pe-lg-5">
+                <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
                     <h2 class="section-title mb-4">Why Choose Us</h2>
                     <p class="text-muted mb-5 lead" style="line-height: 1.8;">
                         We combine industry-leading expertise with tailored strategies to build infrastructure that scales with your enterprise. Quality is engineered into everything we do.
@@ -258,7 +266,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
                     <div class="bg-white p-4 p-md-5 rounded-5 shadow-premium border border-light position-relative">
                         <div class="position-absolute top-0 start-0 w-100 rounded-top-5" style="height: 6px; background: linear-gradient(90deg, var(--brand-blue), var(--brand-orange));"></div>
 
@@ -293,7 +301,7 @@
     <!-- =========================
          BRANDS GRID
          ========================= -->
-    <section class="py-5 bg-white border-top border-light">
+    <section class="py-5 bg-white border-top border-light" data-aos="zoom-in" data-aos-offset="50">
         <div class="container-wide">
             
             <div class="text-center mb-5">
@@ -308,7 +316,7 @@
                 <div class="col text-center"><img src="kraner.png" alt="Kramer" class="brand-logo-img"></div>
                 <div class="col text-center"><img src="digisol.png" alt="Digisol" class="brand-logo-img"></div>
                 <div class="col text-center"><img src="legrand.png" alt="Legrand" class="brand-logo-img"></div>
-                <div class="col text-center"><img src="fortinet.png" alt="Fortinet" class="brand-logo-img"></div>
+                <div class="col text-center"><img src="fortinet.webp" alt="Fortinet" class="brand-logo-img"></div>
                 <div class="col text-center"><img src="poly.png" alt="Poly" class="brand-logo-img"></div>
                 <div class="col text-center"><img src="hanwa.png" alt="Hanwha" class="brand-logo-img"></div>
                 <div class="col text-center"><img src="benq.png" alt="BenQ" class="brand-logo-img"></div>
@@ -322,14 +330,26 @@
          ========================= -->
     <footer class="bg-dark text-white py-5 text-center">
         <div class="container-wide">
+            <!-- REVERTED: Added back the grayscale and brightness filters -->
             <img src="Picsart_26-04-26_11-43-35-209.jpg.jpeg" alt="Logo" height="30" class="mb-4 opacity-50" style="filter: grayscale(100%) brightness(200%);">
             <p class="mb-0 small text-white-50 tracking-wide">&copy; 2026 Mancraft Solutions. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            duration: 800, // Animation takes 0.8 seconds
+            once: true,    // Animations only happen once when scrolling down
+            offset: 100    // Triggers animation slightly before you scroll exactly to the item
+        });
+
+        // WhatsApp Form Script
         document.getElementById('whatsappForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -340,7 +360,7 @@
             const phoneNumber = "918088803188"; 
 
             const message = `Hello Mancraft Solutions!%0A%0ANew Consultation Request:%0A- Name: ${name}%0A- Email: ${email}%0A- Company: ${company}`;
-            const whatsappUrl = `https://wa.me/${"918088803188"}?text=${message}`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
             window.open(whatsappUrl, '_blank');
         });
