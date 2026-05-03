@@ -12,7 +12,7 @@
     --bg-light: #f7fafc; 
 }
 
-/* Custom Wide Layout */
+/* Custom Wide Layout (FIXED PADDING) */
 .container-wide {
     width: 100%;
     max-width: 1536px; 
@@ -85,12 +85,11 @@ body {
    HERO SECTION (FULL BLEED FIX)
    ========================================= */
 .hero-section {
-    padding: 0 !important; /* Forces zero outer gap */
+    padding: 0 !important; 
 }
 
-/* Controls the text padding so it still aligns perfectly with the rest of your site */
 .hero-text-pad {
-    padding: 60px 15px; /* Mobile padding */
+    padding: 60px 15px; 
 }
 
 .hero-title {
@@ -101,10 +100,9 @@ body {
     padding-bottom: 10px; 
 }
 
-/* Makes the image completely fill its side of the screen */
 .custom-slider-img {
     height: 100% !important; 
-    min-height: 450px; /* Stops image from getting too thin on mobile */
+    min-height: 450px; 
     width: 100%;
     object-fit: cover; 
     object-position: center;
@@ -115,7 +113,6 @@ body {
     .hero-text-pad {
         padding-top: 100px;
         padding-bottom: 100px;
-        /* This perfectly aligns the left text with your container-wide elements below! */
         padding-left: max(2rem, calc((100vw - 1536px) / 2 + 2rem)); 
         padding-right: 4rem;
     }
@@ -126,17 +123,15 @@ body {
     }
     
     .custom-slider-img {
-        min-height: 650px; /* Cinematic height for desktop */
+        min-height: 650px; 
     }
 }
 
-/* Mobile text wrap fix */
 @media (max-width: 991px) {
     .hero-title {
         font-size: 2.8rem !important; 
     }
 }
-
 
 /* =========================================
    SPECIALIZATIONS CARDS
@@ -222,20 +217,19 @@ body {
 }
 
 /* =========================================
-   BRANDS SECTION (LOGO GRID)
+   BRANDS SECTION (LOGO GRID) - UPDATED FULL COLOR
    ========================================= */
 .brand-logo-img {
     height: 45px;          
     width: 150px;          
     object-fit: contain;   
+    /* mix-blend-mode keeps the white backgrounds completely hidden! */
     mix-blend-mode: multiply; 
-    filter: grayscale(100%) opacity(50%); 
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .brand-logo-img:hover {
-    filter: grayscale(0%) opacity(100%);
     transform: translateY(-3px); 
 }
 
